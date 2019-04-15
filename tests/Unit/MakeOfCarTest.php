@@ -5,9 +5,9 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use App\User;
+use App\Car;
 
-class RecordCountTest extends TestCase
+class MakeOfCarTest extends TestCase
 {
     /**
      * A basic unit test example.
@@ -16,8 +16,10 @@ class RecordCountTest extends TestCase
      */
     public function testExample()
     {
-        $userCount = 50;
-	        $users = factory(User::class, 50)->create();
-	        $this->assertEquals( $userCount, \count( $users ) );
+        $makeArray = ['ford','honda' ,'toyota'];
+	        #factory(Car::class)->create();
+	        $car =  Car::first();
+	        $this->assertContains( $car->make, $makeArray );
+	        $this->assertTrue(true);
     }
 }
