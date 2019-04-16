@@ -14,10 +14,11 @@ class CarYearIntegerTest extends TestCase
      *
      * @return void
      */
-    /*public function testExample()
+    public function testExample()
     {
-        factory(Car::class)->create();
-	        $car =  Car::first();
-	        $this->assertTrue(is_int($car->year));
-    }*/
+        #$car = factory(Car::class)->create();
+	      $car =  Car::first();
+	        #dd($car);
+	        $this->assertTrue(is_string($car->year));
+    }
 }
